@@ -1,5 +1,5 @@
 /* CSS Variables - Will be updated by JavaScript */
-body {
+:root {
     /* Colors */
     --background-color-1: #ffafbd;
     --background-color-2: #ffc3a0;
@@ -21,7 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, var(--background-color-1), var(--background-color-2));
-    font-family: Arial, sans-serif;
+    font-family: 'Pacifico', cursive;
     overflow-x: hidden;
 }
 
@@ -61,6 +61,7 @@ body {
 
 .cute-btn {
     background: var(--button-color);
+    font-family: 'Dancing Script', cursive;
     border: none;
     padding: 10px 20px;
     margin: 10px;
@@ -256,7 +257,7 @@ body {
 }
 
 h1, h2 {
-    font-family: Arial, sans-serif;
+    font-family: 'Pacifico', cursive;;
     font-weight: 700;
 }
 
@@ -316,3 +317,16 @@ h2 {
     transform: scale(1.05);
     background: var(--secondary-color);
 } 
+
+@keyframes dance {
+    0%, 100% { transform: rotate(-5deg) translateY(0); }
+    50% { transform: rotate(5deg) translateY(-5px); }
+}
+
+.last-page-question {
+    display: inline-block; /* Ensures the transform applies correctly */
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--text-color);
+    animation: dance 0.5s ease-in-out infinite alternate;
+}
